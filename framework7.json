@@ -1,0 +1,26 @@
+{
+  "cwd": "/Users/amansingh/.bitnami/stackman/machines/xampp/volumes/root/htdocs/redux-app",
+  "type": [
+    "web"
+  ],
+  "name": "Redux",
+  "framework": "react",
+  "template": "blank",
+  "cssPreProcessor": false,
+  "bundler": "webpack",
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
