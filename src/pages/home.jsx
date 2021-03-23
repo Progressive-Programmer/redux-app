@@ -9,6 +9,7 @@ import {
   Block,
 } from 'framework7-react';
 import Post from './post';
+import PostForm from './postform';
 
 const HomePage = () => (
   <Page name="home">
@@ -25,6 +26,8 @@ const HomePage = () => (
     {/* Page content */}
     <Block strong>
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
+      <PostForm />
+      <hr/>
       <Post />
     </Block>
 
