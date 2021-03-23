@@ -6,8 +6,24 @@ export default ()=>{
     const [body, setBody] = useState('');
 
 
-    const submit = ()=>{
+    const onSubmit = (e)=>{
+        e.preventDefault();
+        
         console.log(title, body)
+        const post = {
+            title: title,
+            body: body,
+        }
+
+        fetch('https://jsonplaceholder.typicode.com/posts',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(post)
+        })  
+        .then(res=> res.json())
+        .then(data=>console.log(data))        
     }
 
 
@@ -19,7 +35,7 @@ export default ()=>{
 
                 <ListInput name="body" label="Body:" onChange={e=>setBody(e.target.value)} />
                 <br/>
-                <Button fill round onClick={submit} >Submit</Button>
+                <Button fill round onClick={onSubmit} >Submit</Button>
             </List>
         </Block>
     )
