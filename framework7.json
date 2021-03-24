@@ -3,7 +3,7 @@
   "type": [
     "web"
   ],
-  "name": "Redux",
+  "name": "Redux App",
   "framework": "react",
   "template": "blank",
   "cssPreProcessor": false,

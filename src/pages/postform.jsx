@@ -28,7 +28,7 @@ export default ()=>{
 
 
     return (
-        <Block>
+        <Block style={{margin:"15%"}}>
             <h1>Add Posts</h1>
             <List noHairlinesMd inlineLabels>
                 <ListInput name="title" label="Title:" onChange={e=>setTitle(e.target.value)} />

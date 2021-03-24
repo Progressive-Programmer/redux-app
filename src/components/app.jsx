@@ -10,13 +10,17 @@ import {
 
 import routes from '../js/routes';
 import store from '../js/store';
+import { Provider } from 'react-redux';
+
+
+
 
 const MyApp = () => {
 
 
   // Framework7 Parameters
   const f7params = {
-    name: 'Redux', // App name
+    name: 'Redux App', // App name
       theme: 'auto', // Automatic theme detection
 
 
@@ -34,12 +38,14 @@ const MyApp = () => {
   });
 
   return (
-    <App { ...f7params } >
+    <Provider store={store}>
+      <App { ...f7params } >
 
-        {/* Your main view, should have "view-main" class */}
-        <View main className="safe-areas" url="/" />
+          {/* Your main view, should have "view-main" class */}
+          <View main className="safe-areas" url="/" />
 
-    </App>
+      </App>
+    </Provider>
   );
 }
 export default MyApp;
